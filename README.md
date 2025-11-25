@@ -1,4 +1,4 @@
-# Yevhenii Sen — Senior Front-End / Full-Stack Engineer (React • JS • Node.js • Go)
+# Yevhenii Sen — Senior Front-End / Mobile / Full-Stack Engineer (React • React Native • Node.js • Go)
 
 **Location:** Ukraine (open to worldwide remote)  
 **Experience:** 10+ years  
