@@ -35,6 +35,21 @@
             text-align: center;
         }
 
+        .photo-container {
+            margin-bottom: 25px;
+        }
+
+        .photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            display: block;
+            margin: 0 auto;
+        }
+
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
@@ -269,6 +284,10 @@
             .header {
                 padding: 30px 20px;
             }
+            .photo {
+                width: 150px;
+                height: 150px;
+            }
             .header h1 {
                 font-size: 2em;
             }
@@ -288,6 +307,9 @@
 <body>
     <div class="container">
         <div class="header">
+            <div class="photo-container">
+                <img src="img/photo.JPG" alt="Yevhenii Sen" class="photo">
+            </div>
             <h1>Yevhenii Sen</h1>
             <div class="subtitle">Senior Front-End / Mobile / Full-Stack Engineer</div>
             <div class="subtitle" style="font-size: 0.95em; opacity: 0.85;">React • React Native • Node.js • Go</div>
