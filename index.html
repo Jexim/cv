@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yevhenii Sen — Senior Front-End / Mobile / Full-Stack Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin-bottom: 25px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            font-size: 0.95em;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .contact-info a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section h2 {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            font-weight: 600;
+        }
+
+        .section h3 {
+            font-size: 1.3em;
+            color: #764ba2;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .section ul li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .skill-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .experience-item {
+            margin-bottom: 30px;
+        }
+
+        .job-title {
+            font-size: 1.4em;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .job-meta {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+        }
+
+        .responsibilities {
+            margin-top: 15px;
+        }
+
+        .responsibilities h4 {
+            font-size: 1.1em;
+            color: #764ba2;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .achievements {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #667eea;
+        }
+
+        .achievements h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .tech-years {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .tech-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 3px solid #667eea;
+        }
+
+        .tech-name {
+            font-weight: 500;
+        }
+
+        .tech-years-value {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .education, .preferences {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .education a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .education a:hover {
+            text-decoration: underline;
+        }
+
+        .languages {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .language-item {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .language-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #667eea, transparent);
+            margin: 30px 0;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 20px;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .content {
+                padding: 30px 20px;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Yevhenii Sen</h1>
+            <div class="subtitle">Senior Front-End / Mobile / Full-Stack Engineer</div>
+            <div class="subtitle" style="font-size: 0.95em; opacity: 0.85;">React • React Native • Node.js • Go</div>
+            <div class="contact-info">
+                <span>📍 Ukraine (open to worldwide remote)</span>
+                <span>💼 10+ years experience</span>
+                <a href="mailto:JeximST@gmail.com">✉️ JeximST@gmail.com</a>
+                <a href="https://github.com/jexim" target="_blank">🔗 GitHub</a>
+                <a href="https://www.linkedin.com/in/yevhenii-sen/" target="_blank">🔗 LinkedIn</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <section class="section">
+                <h2>Summary</h2>
+                <p>
+                    Senior Front-End Engineer with 10+ years of experience building scalable, high-quality web applications, UI systems, and client-side architectures.<br>
+                    My primary specialization is <strong>front-end development with React and JavaScript</strong>, including state management, real-time features, performance optimization, complex UI/UX, and product-focused development.
+                </p>
+                <p>
+                    I also have strong backend experience with <strong>Node.js</strong> and <strong>Go</strong>, building APIs, microservices, WebSocket services, and working with PostgreSQL.<br>
+                    Additionally, I've built and published mobile apps using <strong>React Native</strong>, and I'm comfortable setting up CI/CD for web, backend, and mobile.
+                </p>
+                <p>
+                    Throughout my career, I often acted as a <strong>Product Engineer / Product Manager hybrid</strong>, taking responsibility for feature discovery, requirement clarification, UX logic, prioritization, and cross-team communication. I can independently define product flows, user scenarios, and interface logic when design or specifications are incomplete.
+                </p>
+                <p>
+                    Long-term remote experience working with teams in the USA, Japan, and Europe.
+                </p>
+            </section>
+
+            <div class="divider"></div>
+
+            <section class="section">
+                <h2>Core Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Front-End (Primary)</h3>
+                        <ul>
+                            <li>React.js</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>Zustand / Redux / MobX</li>
+                            <li>React Query / SWR</li>
+                            <li>Tailwind / SASS / CSS3</li>
+                            <li>WebSockets, WebRTC</li>
+                            <li>Vite, Webpack</li>
+                            <li>WEB 3</li>
+                            <li>UI architecture & component systems</li>
+                            <li>Performance optimization</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Product & PM Skills</h3>
+                        <ul>
+                            <li>Feature discovery & requirement clarification</li>
+                            <li>UX flow creation & wireframing</li>
+                            <li>Prioritization & backlog shaping</li>
+                            <li>Cross-team communication (design, backend, DevOps, QA)</li>
+                            <li>Writing product logic & user scenarios</li>
+                            <li>Ownership of product verticals</li>
+                            <li>Ability to work without finalized design specifications</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Mobile</h3>
+                        <ul>
+                            <li>React Native</li>
+                            <li>Publishing to App Store & Google Play</li>
+                            <li>Mobile CI/CD (Bitrise, GitHub Actions)</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <ul>
+                            <li>Node.js (Express, Nest.js)</li>
+                            <li>Go (2 years): REST, microservices, Kafka, WebSockets</li>
+                            <li>PostgreSQL, MySQL, MongoDB</li>
+                            <li>GraphQL</li>
+                            <li>REST API design</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>DevOps & Infra</h3>
+                        <ul>
+                            <li>AWS (Lambda, Cognito, S3, DynamoDB, RDS, CloudFront)</li>
+                            <li>Docker, Kubernetes (GKE), Helm</li>
+                            <li>GitHub Actions, GitLab CI, Bitrise</li>
+                            <li>Server configuration, monitoring, automation</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <section class="section">
+                <h2>Professional Experience</h2>
+                <div class="experience-item">
+                    <div class="job-title">Senior Front-End / Full-Stack Engineer</div>
+                    <div class="job-meta">Remote (Worldwide) • 2013 — Present</div>
+
+                    <div class="responsibilities">
+                        <h4>Front-end responsibilities (primary):</h4>
+                        <ul>
+                            <li>Development of complex React applications and dashboards</li>
+                            <li>Architecture of front-end systems and shared component libraries</li>
+                            <li>Implementing features without finalized designs (self-driven UX/UI)</li>
+                            <li>Designing user flows, edge cases, and experience logic</li>
+                            <li>Real-time interfaces (WebSockets, subscriptions)</li>
+                            <li>Performance improvements and code quality ownership</li>
+                            <li>Product-oriented development and cross-team coordination</li>
+                            <li>Writing maintainable, testable front-end code</li>
+                        </ul>
+
+                        <h4>Product engineering responsibilities:</h4>
+                        <ul>
+                            <li>Acting as a bridge between business, design, and engineering</li>
+                            <li>Translating ideas into clear features, flows, and technical tasks</li>
+                            <li>Creating wireframes, UX flows, and product requirements</li>
+                            <li>Prioritizing tasks in collaboration with stakeholders</li>
+                            <li>Managing feature delivery end-to-end</li>
+                            <li>Improving existing product logic & reducing tech/product debt</li>
+                        </ul>
+
+                        <h4>Full-stack responsibilities:</h4>
+                        <ul>
+                            <li>Building backend features on Node.js or Go</li>
+                            <li>REST APIs, microservices, workers, Kafka consumers</li>
+                            <li>Database schema design and SQL queries</li>
+                            <li>WebSocket servers and event pipelines</li>
+                        </ul>
+
+                        <h4>Mobile:</h4>
+                        <ul>
+                            <li>React Native development from scratch</li>
+                            <li>Full release cycle to App Store & Google Play</li>
+                        </ul>
+
+                        <h4>DevOps:</h4>
+                        <ul>
+                            <li>CI/CD pipelines for web, backend, and mobile</li>
+                            <li>Infrastructure automation and monitoring</li>
+                            <li>Server configuration (Linux, Nginx, Docker)</li>
+                        </ul>
+                    </div>
+
+                    <div class="achievements">
+                        <h4>Key achievements:</h4>
+                        <ul>
+                            <li>Released a full mobile app (React Native) from idea to stores</li>
+                            <li>Built CI/CD pipelines automating releases and deployments</li>
+                            <li>Owned major product verticals (architecture → UX → delivery)</li>
+                            <li>Designed and implemented interfaces without design files</li>
+                            <li>Developed Go-based real-time microservices</li>
+                            <li>Successfully collaborated with remote teams in US/Japan for years</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <section class="section">
+                <h2>Tech Experience (Years)</h2>
+                <div class="tech-years">
+                    <div class="tech-item">
+                        <span class="tech-name">React.js</span>
+                        <span class="tech-years-value">8+ years</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-name">JavaScript</span>
+                        <span class="tech-years-value">10+ years</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-name">React Native</span>
+                        <span class="tech-years-value">3+ years</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-name">Node.js</span>
+                        <span class="tech-years-value">5+ years</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-name">Go</span>
+                        <span class="tech-years-value">2 years</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-name">AWS</span>
+                        <span class="tech-years-value">3+ years</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-name">Serverless</span>
+                        <span class="tech-years-value">1 year</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-name">PostgreSQL / MongoDB</span>
+                        <span class="tech-years-value">5+ years</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-name">Vue.js / Vuex</span>
+                        <span class="tech-years-value">3 years</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-name">GraphQL</span>
+                        <span class="tech-years-value">2 years</span>
+                    </div>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <section class="section">
+                <h2>Education</h2>
+                <div class="education">
+                    <p>
+                        <a href="https://nure.ua/" target="_blank">Kharkiv National University of Radioelectronics</a><br>
+                        <strong>Certified Specialist in Software Development & Testing</strong>
+                    </p>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <section class="section">
+                <h2>Work Preferences</h2>
+                <div class="preferences">
+                    <ul>
+                        <li>Thoughtful architecture</li>
+                        <li>Clean, maintainable, well-tested code</li>
+                        <li>Strong engineering culture</li>
+                        <li>Clear project & task management</li>
+                        <li>Ability to influence product decisions</li>
+                        <li>Comfortable working without finalized design</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <section class="section">
+                <h2>Languages</h2>
+                <div class="languages">
+                    <div class="language-item">
+                        <span class="language-name">Ukrainian:</span> Native
+                    </div>
+                    <div class="language-item">
+                        <span class="language-name">English:</span> B1 — Intermediate
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
+
