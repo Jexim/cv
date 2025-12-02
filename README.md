@@ -67,6 +67,57 @@ Long-term remote experience working with teams in the USA, Japan, and Europe.
 
 ## Professional Experience
 
+### Full Stack Developer  
+**Entravel** · Full-time · Apr 2025 - Present · 9 mos · Kyiv City, Ukraine · Remote
+
+- Built Telegram Mini-App features for bookings, referrals, and partner flows
+- Developed backend microservices in Go for partners, multi-level referrals, rewards, achievements
+- Integrated Kafka, Redis, Postgres (SQLC) and optimized performance of high-load services
+- Developed front-end modules for partner dashboards in React/TypeScript
+- Worked with microservices, CI/CD pipelines, GKE, Helm deployments
+
+### Full Stack Developer  
+**Tacans Labs** · Full-time · Jun 2024 - Apr 2025 · 11 mos · Kyiv City, Ukraine · Remote
+
+- Developed a Telegram Mini-App for user acquisition and marketing flows
+- Built backend services in Go: APIs, caching, database optimization, webhooks
+- Implemented marketing tools: promo codes, tracking, analytics, partner integrations
+- Added Web3 support (WalletConnect, blockchain address verification)
+- Integrated external APIs and marketing platforms
+
+### Frontend Developer  
+**Kinchaku** · Full-time · Apr 2020 - Apr 2024 · 4 yrs 1 mo · Fukuoka, Fukuoka, Japan · Remote
+
+- Developing a web app by VUE.JS https://app.kinchaku.com/
+- Developing a mobile app by React Native https://apps.apple.com/gb/app/kinchaku/id1469201883
+- Configure CI/CD (GitHub Actions, CircleCI, AWS)
+
+### Full Stack Engineer  
+**Campus on Fire** · Full-time · Nov 2019 - Apr 2020 · 6 mos · Remote
+
+- Developing a web app by VUE.JS
+- Developing a server by Express and GraphQL
+- Configure CI/CD (GitLab CI)
+
+### Full-stack Developer  
+**Decode LLC** · Nov 2016 - Sep 2019 · 2 yrs 11 mos · Greater Tokyo Area · Remote
+
+- Front-end: React/Redux, React Native, Angular, Vue include the experience of Canvas, FabricJS, Web Audio API
+- Back-end: AWS (Cognito, Dynamodb, Appsync, RDS, Lambda (Node.js)), Serverless, NodeJS, Express
+
+### Frontend Developer  
+**Velvet Ropes, Inc** · Aug 2015 - Jun 2016 · 11 mos · Los Angeles Metropolitan Area · Remote
+
+- Layout of all pages of the project
+- Work with AngularJS
+
+### Web Developer  
+**Футбоголик** · Jun 2012 - Mar 2013 · 10 mos · Kharkiv Metropolitan Area · On-site
+
+- Support e-shops suites for partners network (PHP, JS, HTML, CSS, Git)
+
+---
+
 ### Senior Front-End / Full-Stack Engineer  
 **Remote (Worldwide)** • 2013 — Present
 
