@@ -178,8 +178,8 @@
                 </div>
 
                 <div class="previous-positions-section" style="margin-top: 40px;">
-                    <div class="collapsible-header" onclick="this.classList.toggle('expanded'); this.nextElementSibling.classList.toggle('expanded');">
-                        <span style="display: flex; align-items: center; gap: 8px;">Previous positions by company (7 positions)</span>
+                    <div class="collapsible-header" onclick="toggleCollapsible(this)">
+                        <span style="display: flex; align-items: center; gap: 8px;">Previous positions by company</span>
                     </div>
                     <div class="collapsible-content">
                         <div class="experience-item">
@@ -272,7 +272,7 @@
             <div class="divider"></div>
 
             <section class="section">
-                <h2>Tech Experience (Years)</h2>
+                <h2>Tech Experience</h2>
                 <div class="tech-years">
                     <div class="tech-item">
                         <span class="tech-name">React.js</span>
@@ -303,8 +303,12 @@
                         <span class="tech-years-value">1+ year</span>
                     </div>
                     <div class="tech-item">
-                        <span class="tech-name">PostgreSQL / MongoDB</span>
+                        <span class="tech-name">PostgreSQL</span>
                         <span class="tech-years-value">5+ years</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-name">MongoDB</span>
+                        <span class="tech-years-value">2+ years</span>
                     </div>
                     <div class="tech-item">
                         <span class="tech-name">Vue.js / Vuex</span>
@@ -362,6 +366,22 @@
     </div>
 
     <script>
+        function toggleCollapsible(header) {
+            const content = header.nextElementSibling;
+            const wasExpanded = header.classList.contains('expanded');
+            const scrollY = window.scrollY;
+            
+            header.classList.toggle('expanded');
+            content.classList.toggle('expanded');
+            
+            // Prevent scroll jump when closing
+            if (wasExpanded) {
+                requestAnimationFrame(() => {
+                    window.scrollTo({ top: scrollY, behavior: 'instant' });
+                });
+            }
+        }
+
         window.addEventListener('beforeprint', function() {
             const collapsibleHeader = document.querySelector('.collapsible-header');
             const collapsibleContent = document.querySelector('.collapsible-content');
