@@ -360,6 +360,17 @@
             </section>
         </div>
     </div>
+
+    <script>
+        window.addEventListener('beforeprint', function() {
+            const collapsibleHeader = document.querySelector('.collapsible-header');
+            const collapsibleContent = document.querySelector('.collapsible-content');
+            if (collapsibleHeader && collapsibleContent && !collapsibleHeader.classList.contains('expanded')) {
+                collapsibleHeader.classList.add('expanded');
+                collapsibleContent.classList.add('expanded');
+            }
+        });
+    </script>
 </body>
 </html>
 
