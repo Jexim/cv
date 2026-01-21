@@ -68,7 +68,7 @@ Long-term remote experience working with teams in the USA, Japan, and Europe.
 ## Professional Experience
 
 ### Full Stack Developer  
-**Entravel** · Full-time · Apr 2025 - Present · 9 mos · Kyiv City, Ukraine · Remote
+**NDA** · Full-time · Apr 2025 - Present · 9 mos · Kyiv City, Ukraine · Remote
 
 - Built Telegram Mini-App features for bookings, referrals, and partner flows
 - Developed backend microservices in Go for partners, multi-level referrals, rewards, achievements
